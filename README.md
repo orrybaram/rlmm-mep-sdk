@@ -23,6 +23,7 @@ import com.rlmm.mep.src.SpeedRunApiEvent;
 var playerName:String;
 var time:String;
 
+var speedRunApi = new SpeedRunApi({ stage: stage });
 speedRunApi.getCategoryRecords('YOUR_CATEGORY_ID');
 
 function onCategoryRecordsResponseReceived(e:SpeedRunApiEvent):void {
