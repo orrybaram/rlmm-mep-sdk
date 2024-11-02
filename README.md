@@ -44,9 +44,10 @@ stage.addEventListener(SpeedRunApiEvent.CATEGORY_RECORDS_RESPONSE_RECEIVED, onCa
 stage.addEventListener(SpeedRunApiEvent.USER_RESPONSE_RECEIVED, onUserResponseReceived);
 ```
 
+## Kismet Example
+See the [Kismet example](examples/src-kismet.md) for a more detailed example of how to use the SDK with Kismet.
+![Kismet example](https://github.com/orrybaram/rlmm-mep-sdk/blob/main/examples/kismet-mep-setup.png?raw=true)
+
 ## Contributing
 This SDK is unfinished and not all endpoints are implemented. Please feel free to contribute to the project!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-
-
