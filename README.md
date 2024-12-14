@@ -3,17 +3,21 @@
 An Actionscript library for integrating with the Map Expansion Plugin and the speedrun.com API.
 
 ## Features
+- RLMM Analytics API
+  - Initialize session
+  - Track custom events
 
-- Fetch category records for a specific category ID
-- Retrieve user information by user ID
-- Format speedrun times into human-readable strings
-- Event-based response handling
+- Speedrun.com API
+  - Fetch category records for a specific category ID
+  - Retrieve user information by user ID
+  - Format speedrun times into human-readable strings
+  - Event-based response handling
 
 ## Installation
 Download the SDK and add the `com` folder to the root directory where you keep your flash files..
 
 
-## Simple Example
+## Speedrun.com API Example
 This will fetch the world record for a category and then fetch the user's name.
 
 ```as
@@ -43,6 +47,20 @@ function onUserResponseReceived(e:SpeedRunApiEvent):void {
 
 stage.addEventListener(SpeedRunApiEvent.CATEGORY_RECORDS_RESPONSE_RECEIVED, onCategoryRecordsResponseReceived);
 stage.addEventListener(SpeedRunApiEvent.USER_RESPONSE_RECEIVED, onUserResponseReceived);
+```
+
+## RLMMA Example
+
+```as
+import com.rlmm.mep.analytics.AnalyticsApi;
+
+var analytics = new AnalyticsApi({ projectId: 'your-project-id', apiKey: 'your-api-key});
+
+//... somewhere in your code ...
+analytics.track('level_completed', {
+  deaths: 10,
+  time: 42
+});
 ```
 
 ## Kismet Example
