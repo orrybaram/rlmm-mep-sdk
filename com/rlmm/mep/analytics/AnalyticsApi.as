@@ -6,7 +6,7 @@ package com.rlmm.mep.analytics {
 
     public class AnalyticsApi  {
         public function AnalyticsApi(config: Object) {
-            fscommand("SET_MEP_COMMAND", "analytics trackinit " + config.apiKey);
+            fscommand("SET_MEP_COMMAND", "analytics trackinit " + config.projectId + " " + config.apiKey);
     
             ExternalInterface.addCallback("track", track);
         }

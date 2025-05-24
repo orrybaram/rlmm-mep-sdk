@@ -54,7 +54,7 @@ stage.addEventListener(SpeedRunApiEvent.USER_RESPONSE_RECEIVED, onUserResponseRe
 ```as
 import com.rlmm.mep.analytics.AnalyticsApi;
 
-var analytics = new AnalyticsApi({ apiKey: 'your-api-key' });
+var analytics = new AnalyticsApi({ projectId: 'your-project-id', apiKey: 'your-api-key' });
 
 //... somewhere in your code ...
 analytics.track('level_completed', {
