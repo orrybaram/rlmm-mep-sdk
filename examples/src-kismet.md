@@ -1,7 +1,14 @@
 Copy and paste the following into your Kismet editor.
 
-### IMPORTANT
-Make sure that the `FSCommand` and the `GFX Invoke Actionscript` nodes are properly linked to your flash file.
+
+------
+## IMPORTANT
+### Make sure that the `FSCommand` and the `GFX Invoke Actionscript` nodes are properly linked to your flash file.
+- You'll need to manually assign the `Movie` property to your flash movie for the `FSCommand` node
+- Add an argument to `GFX Invoke Actionscript` or else your game will crash!
+
+
+------
 
 ```
 Begin Object Class=SeqVar_String Name=SeqVar_String_50
