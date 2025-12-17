@@ -14,8 +14,17 @@ An Actionscript library for integrating with the Map Expansion Plugin and the sp
   - Event-based response handling
 
 ## Installation
-Download the SDK and add the `com` folder to the root directory where you keep your flash files..
+### Part 1: Flash
+Download the SDK and add the `com` folder to the root directory where you keep your flash files.
+Make sure to add this directory as a source path in Action Script Settings
 
+<img width="451" height="681" alt="action script settings" src="https://github.com/user-attachments/assets/b365313a-d5d5-4430-806e-9736c310081f" />
+
+### Part 2: UDK
+The SDK uses `fscommands` to send messages from your flash project to kismet which then in turn make calls to the Map Expansion Plugin.
+In order for this to work you'll need to make the following additions in kismet:
+![Kismet example](https://github.com/orrybaram/rlmm-mep-sdk/blob/main/examples/kismet-mep-setup.png?raw=true)  
+You can copy this code directly here: [Kismet example](examples/src-kismet.md)
 
 ## Speedrun.com API Example
 This will fetch the world record for a category and then fetch the user's name.
@@ -49,7 +58,7 @@ stage.addEventListener(SpeedRunApiEvent.CATEGORY_RECORDS_RESPONSE_RECEIVED, onCa
 stage.addEventListener(SpeedRunApiEvent.USER_RESPONSE_RECEIVED, onUserResponseReceived);
 ```
 
-## RLMMA Example
+## Analytics Example
 
 ```as
 import com.rlmm.mep.analytics.AnalyticsApi;
@@ -62,10 +71,6 @@ analytics.track('level_completed', {
   time: 42
 });
 ```
-
-## Kismet Example
-See the [Kismet example](examples/src-kismet.md) for a more detailed example of how to use the SDK with Kismet.
-![Kismet example](https://github.com/orrybaram/rlmm-mep-sdk/blob/main/examples/kismet-mep-setup.png?raw=true)
 
 ## Contributing
 This SDK is unfinished and not all endpoints are implemented. Please feel free to contribute to the project!
