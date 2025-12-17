@@ -18,8 +18,8 @@ An Actionscript library for integrating with the Map Expansion Plugin and the sp
 [Download the SDK](https://github.com/orrybaram/rlmm-mep-sdk/archive/refs/heads/main.zip)
 
 ### Part 2: Flash
-Move the downloaded root `com` folder to the directory where you keep your flash files (NOTE: not the publishing directory).
-Make sure to add this directory as a source path in Action Script Settings
+- Move the downloaded root `com` folder to the directory where you keep your flash files (NOTE: not the publishing directory).
+- Make sure to add this directory as a source path in Action Script Settings
 
 <img width="451" height="681" alt="action script settings" src="https://github.com/user-attachments/assets/b365313a-d5d5-4430-806e-9736c310081f" />
 
